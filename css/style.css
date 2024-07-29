@@ -9,11 +9,13 @@
 
 .interface {
     max-width: 1280px;
+    height: 100%;
     margin: 0 auto;
 }
 
 body {
-    background-color: black;
+    background-color: white;
+    height: 200vh;
 }
 
 /* Estilo do Header */
@@ -24,12 +26,26 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    transition: .3s;
+}
+
+header.scrolled {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+header.scrolled .menu-desktop a,
+header.scrolled .btn-login .btn {
+    color: #000;
 }
 
 header .interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 3rem;
 }
 
 header .logo a img {
@@ -70,8 +86,9 @@ header .menu-desktop nav ul li a {
     height: 2px;
     background: #4d96b3;
     transform: translateX(-50%);
-    transition: width 0.4s, left 0.4s;
+    transition: width .5s, left .5s;
 }
+
 .menu-desktop nav a:hover::before {
     width: 100%;
 }
@@ -99,7 +116,7 @@ header .btn-login .btn:hover {
 
 /* Estilo da introduction */
 section.introduction {
-    height: 95vh;
+    height: 100vh;
     width: 100vw;
     color: #fff;
     position: relative;
@@ -110,7 +127,7 @@ section.introduction {
     position: relative;
     display: flex;
     align-items: center;
-    background-image: url('../img/background-home-page.jpg');
+    background-image: url('../img/background-home-page.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -140,6 +157,7 @@ section.introduction {
 .txt-introduction h1 span {
     display: block;
     color: #4d96b3;
+    font-style: italic;
     font-weight: 500;
 }
 
@@ -165,3 +183,77 @@ section.introduction {
     color: #fff;
     background-color: #4d96b3;
 }
+
+/* Esitlo da seção "Sobre nós" */
+section.about-us {
+    padding: 4rem 0;
+    position: relative;
+    background-color: #e3e3e3;
+}
+
+.interface h1 a {
+    margin: 1rem 0;
+    color: #4d96b3;
+    font-size: 2em;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.interface h1 a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4d96b3;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s ease-in;
+}
+
+.interface h1 a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.items-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+    gap: 5%;
+}
+
+.txt-items p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.txt-items p span {
+    color: #4d96b3;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.img-items img {
+    max-width: 420px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 7px 0px #4d96b3;
+}
+
+/* Estilo scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4d96b3;
+    border: 2px solid #e5e5e5;
+    border-radius: 1rem;
+  }

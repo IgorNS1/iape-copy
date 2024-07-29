@@ -7,18 +7,18 @@
     <title>IAPE</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="interface">
             <section class="logo">
-                <a href="#">
-                    <img src="./img/iape-logo.png" alt="IAPE">
+                <a href="index.html">
+                    <img id="logo" src="./img/iape-logo-light.png" alt="IAPE">
                 </a>
             </section>
 
             <section class="menu-desktop">
                 <nav>
                     <ul>
-                        <li><a href="#">Início</a></li>
+                        <li><a href="#inicio">Início</a></li>
                         <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Equipe</a></li>
                         <li><a href="#">Fazer parte</a></li>
@@ -34,15 +34,50 @@
         </div> <!-- fim header -->
     </header>
 
-    <section class="introduction">
+    <section class="introduction" id="inicio">
         <div class="interface-hero">
             <div class="overlay"></div>
             <div class="txt-introduction">
-                <h1>Texto <span>Introdutório</span></h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+                <h1>Bem-vindo à <span>IAPE</span></h1>
+                <p>Uma iniciativa de acolhimento psicológico para você!</p>
                 <button class="btn-more-details">Saiba Mais</button>
             </div>
         </div>
     </section> <!-- fim introduction -->
+
+    <section class="about-us">
+        <div class="interface">
+            <h1>
+                <a href="#">Sobre nós</a>
+            </h1>
+            
+            <article class="items-container">
+                <div class="img-items">
+                    <img src="./img/about-us-1.jpg" alt="Pessoa Jogando">
+                </div>
+
+                <div class="txt-items">
+                    <p>
+                        A <span>IAPE</span> é um projeto dedicado ao cenário de e-sports, contando com uma equipe de psicólogos(as) altamente qualificados para acolher e auxiliar você em suas questões!
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="items-container">
+                <div class="txt-items">
+                    <p>
+                        Aqui, você receberá o acolhimento necessário para o seu momento atual. Sabemos o quanto pode ser difícil dar esse primeiro passo, mas estamos felizes que você chegou até aqui! Será um prazer ajudá-lo no que for preciso. Nosso grupo é formado por psicólogos, homens e mulheres, para que você possa escolher com quem se sentir mais à vontade.
+                    </p>
+                </div>
+
+                <div class="img-items">
+                    <img src="./img/about-us-2.jpg" alt="Conversa com o psicólogo(a)">
+                </div>
+            </article>
+        </div>
+    </section> <!-- fim about-us -->
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
