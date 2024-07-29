@@ -15,7 +15,6 @@
 
 body {
     background-color: white;
-    height: 200vh;
 }
 
 /* Estilo do Header */
@@ -94,7 +93,7 @@ header .menu-desktop nav ul li a {
 }
 
 .menu-desktop nav a:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 header .btn-login .btn {
@@ -257,3 +256,96 @@ section.about-us {
     border: 2px solid #e5e5e5;
     border-radius: 1rem;
   }
+
+  /* Estilo da seção team */
+section.team {
+    padding: 4rem 0;
+    position: relative;
+    background-color: #4d96b3;
+}
+
+section.team .interface h1 {
+    margin-bottom: 3rem;
+}
+
+section.team .interface h1 a {
+    color: #fff;
+}
+
+section.team .interface h1 a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s ease-in;
+}
+
+section.team .interface h1 a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.team-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s;
+    position: relative;
+}
+
+.team-card:hover {
+    box-shadow: 0px 0px 15px 0px #fff;
+}
+
+.btn-more-team {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.team-picture {
+    margin: 1rem auto;
+}
+
+.team-picture img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.txt-about {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.txt-about h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.txt-about p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
